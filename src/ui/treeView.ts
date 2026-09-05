@@ -1,6 +1,6 @@
 import * as path from 'node:path';
 import * as vscode from 'vscode';
-import { SafeAiFinding, SafeAiScanResult, SafeAiSeverity, SEVERITY_LABELS, SEVERITY_ORDER } from '../safeai/types';
+import { SafeAiFinding, SafeAiScanResult, SafeAiSeverity, SEVERITY_LABELS } from '../safeai/types';
 
 type TreeNode = SeverityNode | FindingNode;
 

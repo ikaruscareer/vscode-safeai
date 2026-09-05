@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { isSeverityAboveThreshold } from '../src/config';
-import { SafeAiSeverity } from '../src/safeai/types';
 
 describe('isSeverityAboveThreshold', () => {
   it('critical is above all thresholds', () => {
