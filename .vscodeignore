@@ -5,3 +5,6 @@ src/
 *.ts
 tsconfig.json
 .eslintrc.json
+eslint.config.js
+.gitignore
+node_modules/
