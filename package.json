@@ -13,7 +13,6 @@
   "categories": ["Linters", "Security"],
   "activationEvents": ["onStartupFinished"],
   "main": "./dist/extension.js",
-  "icon": "icon.png",
   "contributes": {
     "commands": [
       { "command": "safeai.scanWorkspace", "title": "SafeAI: Scan Workspace", "icon": "$(shield)" },
