@@ -1,0 +1,44 @@
+{
+  "name": "safeai-vscode",
+  "displayName": "SafeAI",
+  "description": "Offline-first SafeAI security and governance scanning for AI-agent codebases.",
+  "version": "0.1.0",
+  "publisher": "ikaruscareer",
+  "license": "Apache-2.0",
+  "engines": { "vscode": "^1.95.0" },
+  "categories": ["Linters", "Security"],
+  "activationEvents": ["onCommand:safeai.scanWorkspace", "onCommand:safeai.scanCurrentFile"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "safeai.scanWorkspace", "title": "SafeAI: Scan Workspace" },
+      { "command": "safeai.scanCurrentFile", "title": "SafeAI: Scan Current File" },
+      { "command": "safeai.clearResults", "title": "SafeAI: Clear Results" }
+    ],
+    "configuration": {
+      "title": "SafeAI",
+      "properties": {
+        "safeai.cliPath": { "type": "string", "default": "safeai", "description": "Path to the SafeAI executable." },
+        "safeai.pythonPath": { "type": "string", "default": "python", "description": "Python executable used for the SafeAI module fallback." },
+        "safeai.severityThreshold": { "type": "string", "enum": ["low", "medium", "high", "critical"], "default": "low", "description": "Lowest finding severity displayed by the extension." },
+        "safeai.extraArgs": { "type": "array", "items": { "type": "string" }, "default": [], "description": "Additional SafeAI CLI arguments." }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "lint": "eslint src test --ext .ts",
+    "test": "vitest run",
+    "package": "npm run compile && npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.95.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@vscode/vsce": "^3.2.0",
+    "eslint": "^9.17.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

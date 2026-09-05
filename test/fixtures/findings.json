@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "0.1",
+  "findings": [
+    {
+      "ruleId": "SAFEAI-MCP-001",
+      "severity": "high",
+      "message": "MCP tool is configured without an explicit allowlist.",
+      "filePath": "agent.py",
+      "line": 12,
+      "column": 3,
+      "remediation": "Define and enforce an explicit allowlist for MCP tools."
+    }
+  ]
+}

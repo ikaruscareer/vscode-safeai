@@ -1,0 +1,7 @@
+.github/
+test/
+src/
+.vscode/
+*.ts
+tsconfig.json
+.eslintrc.json
