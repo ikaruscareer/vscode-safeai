@@ -5,6 +5,10 @@
   "version": "0.2.0",
   "publisher": "ikaruscareer",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ikaruscareer/vscode-safeai.git"
+  },
   "engines": { "vscode": "^1.95.0" },
   "categories": ["Linters", "Security"],
   "activationEvents": ["onStartupFinished"],
