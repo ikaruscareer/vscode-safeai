@@ -13,7 +13,8 @@ export default [
       '@typescript-eslint': pluginTs
     },
     rules: {
-      ...pluginTs.configs.recommended?.rules
+      ...pluginTs.configs.recommended?.rules,
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }]
     }
   },
   {
