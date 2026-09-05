@@ -1,7 +1,3 @@
-const enum ProxyEnum {
-  _zero = 0,
-}
-
 class ProxyClass {
   constructor(..._args: unknown[]) {}
 }
